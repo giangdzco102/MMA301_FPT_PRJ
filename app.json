@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "voice-notes-ai",
+    "name": "Voice Notes AI",
     "slug": "voice-notes-ai",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -20,7 +20,7 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "output": "server",
+      "output": "single",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
@@ -31,6 +31,23 @@
           "backgroundColor": "#208AEF",
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
+        }
+      ],
+      "expo-audio",
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Cho phép $(PRODUCT_NAME) dùng micro để ghi âm.",
+          "recordAudioAndroid": true
+        }
+      ],
+      "expo-asset",
+      [
+        "react-native-audio-api",
+        {
+          "iosBackgroundMode": false,
+          "androidForegroundService": false,
+          "androidPermissions": []
         }
       ]
     ],
